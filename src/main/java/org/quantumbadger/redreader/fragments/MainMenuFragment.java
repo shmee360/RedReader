@@ -61,15 +61,16 @@ public class MainMenuFragment extends RRFragment implements
 	public static final int MENU_MENU_ACTION_UPVOTED = 4;
 	public static final int MENU_MENU_ACTION_DOWNVOTED = 5;
 	public static final int MENU_MENU_ACTION_SAVED = 6;
-	public static final int MENU_MENU_ACTION_MODMAIL = 7;
-	public static final int MENU_MENU_ACTION_HIDDEN = 8;
-	public static final int MENU_MENU_ACTION_CUSTOM = 9;
-	public static final int MENU_MENU_ACTION_ALL = 10;
-	public static final int MENU_MENU_ACTION_POPULAR = 11;
-	public static final int MENU_MENU_ACTION_RANDOM = 12;
-	public static final int MENU_MENU_ACTION_RANDOM_NSFW = 13;
-	public static final int MENU_MENU_ACTION_SENT_MESSAGES = 14;
-	public static final int MENU_MENU_ACTION_FIND_SUBREDDIT = 15;
+	public static final int MENU_MENU_ACTION_SAVED_COMMENTS = 7;
+	public static final int MENU_MENU_ACTION_MODMAIL = 8;
+	public static final int MENU_MENU_ACTION_HIDDEN = 9;
+	public static final int MENU_MENU_ACTION_CUSTOM = 10;
+	public static final int MENU_MENU_ACTION_ALL = 11;
+	public static final int MENU_MENU_ACTION_POPULAR = 12;
+	public static final int MENU_MENU_ACTION_RANDOM = 13;
+	public static final int MENU_MENU_ACTION_RANDOM_NSFW = 14;
+	public static final int MENU_MENU_ACTION_SENT_MESSAGES = 15;
+	public static final int MENU_MENU_ACTION_FIND_SUBREDDIT = 16;
 
 	@IntDef({
 			MENU_MENU_ACTION_FRONTPAGE,
@@ -79,6 +80,7 @@ public class MainMenuFragment extends RRFragment implements
 			MENU_MENU_ACTION_UPVOTED,
 			MENU_MENU_ACTION_DOWNVOTED,
 			MENU_MENU_ACTION_SAVED,
+			MENU_MENU_ACTION_SAVED_COMMENTS,
 			MENU_MENU_ACTION_MODMAIL,
 			MENU_MENU_ACTION_HIDDEN,
 			MENU_MENU_ACTION_CUSTOM,
@@ -205,7 +207,8 @@ public class MainMenuFragment extends RRFragment implements
 	}
 
 	public enum MainMenuUserItems {
-		PROFILE, INBOX, SUBMITTED, SAVED, HIDDEN, UPVOTED, DOWNVOTED, MODMAIL, SENT_MESSAGES
+		PROFILE, INBOX, SUBMITTED, SAVED, SAVED_COMMENTS, HIDDEN, UPVOTED, DOWNVOTED, MODMAIL,
+		SENT_MESSAGES
 	}
 
 	public enum MainMenuShortcutItems {

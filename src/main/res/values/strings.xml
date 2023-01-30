@@ -144,6 +144,7 @@
     <string name="mainmenu_custom">Custom Subreddit</string>
     <string name="mainmenu_custom_invalid_name">Invalid subreddit name.</string>
     <string name="mainmenu_saved">Saved Posts</string>
+	<string name="mainmenu_saved_comments">Saved Comments</string>
     <string name="mainmenu_hidden">Hidden Posts</string>
     <string name="mainmenu_upvoted">Upvoted Posts</string>
     <string name="mainmenu_inbox">Inbox</string>

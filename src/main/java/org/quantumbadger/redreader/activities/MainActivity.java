@@ -276,6 +276,11 @@ public class MainActivity extends RefreshableActivity
 				onSelected(UserPostListingURL.getSaved(username));
 				break;
 
+			case MainMenuFragment.MENU_MENU_ACTION_SAVED_COMMENTS:
+				onSelected(UserPostListingURL.getSaved(username));
+				Log.d("TESTING", "test");
+				break;
+
 			case MainMenuFragment.MENU_MENU_ACTION_HIDDEN:
 				onSelected(UserPostListingURL.getHidden(username));
 				break;

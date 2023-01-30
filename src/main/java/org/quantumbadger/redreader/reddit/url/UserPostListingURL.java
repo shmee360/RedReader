@@ -50,6 +50,10 @@ public class UserPostListingURL extends PostListingURL {
 		return new UserPostListingURL(Type.SUBMITTED, username, null, null, null, null);
 	}
 
+	public static UserPostListingURL getSavedComments(final String username) {
+		return new UserPostListingURL(Type.SAVED_COMMENTS, username, null, null, null, null);
+	}
+
 	public final Type type;
 	public final String user;
 	public final PostSort order;
@@ -73,7 +77,7 @@ public class UserPostListingURL extends PostListingURL {
 	}
 
 	public enum Type {
-		SAVED, HIDDEN, UPVOTED, DOWNVOTED, SUBMITTED
+		SAVED, SAVED_COMMENTS, HIDDEN, UPVOTED, DOWNVOTED, SUBMITTED
 	}
 
 	@Override
@@ -265,6 +269,10 @@ public class UserPostListingURL extends PostListingURL {
 
 			case SUBMITTED:
 				name = context.getString(R.string.mainmenu_submitted);
+				break;
+
+			case SAVED_COMMENTS:
+				name = context.getString(R.string.mainmenu_saved_comments);
 				break;
 
 			default:

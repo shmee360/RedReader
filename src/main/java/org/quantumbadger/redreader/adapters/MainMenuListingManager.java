@@ -140,6 +140,7 @@ public class MainMenuListingManager {
 		final Drawable rrIconSentMessages;
 		final Drawable rrIconSend;
 		final Drawable rrIconStarFilled;
+		final Drawable rrIconComments;
 		final Drawable rrIconCross;
 		final Drawable rrIconUpvote;
 		final Drawable rrIconDownvote;
@@ -152,6 +153,7 @@ public class MainMenuListingManager {
 					R.attr.rrIconSentMessages,
 					R.attr.rrIconSend,
 					R.attr.rrIconStarFilled,
+					R.attr.rrIconComments,
 					R.attr.rrIconCross,
 					R.attr.rrIconArrowUpBold,
 					R.attr.rrIconArrowDownBold,
@@ -162,17 +164,18 @@ public class MainMenuListingManager {
 			rrIconEnvOpen = ContextCompat.getDrawable(activity, attr.getResourceId(1, 0));
 			rrIconSentMessages = ContextCompat.getDrawable(activity, attr.getResourceId(2,0));
 			rrIconSend = ContextCompat.getDrawable(activity, attr.getResourceId(3, 0));
-			rrIconStarFilled = ContextCompat.getDrawable(
+			rrIconStarFilled = ContextCompat.getDrawable(activity, attr.getResourceId(4, 0));
+			rrIconComments = ContextCompat.getDrawable(
 					activity,
-					attr.getResourceId(4, 0));
-			rrIconCross = ContextCompat.getDrawable(activity, attr.getResourceId(5, 0));
-			rrIconUpvote = ContextCompat.getDrawable(activity, attr.getResourceId(6, 0));
+					attr.getResourceId(5, 0));
+			rrIconCross = ContextCompat.getDrawable(activity, attr.getResourceId(6, 0));
+			rrIconUpvote = ContextCompat.getDrawable(activity, attr.getResourceId(7, 0));
 			rrIconDownvote = ContextCompat.getDrawable(
 					activity,
-					attr.getResourceId(7, 0));
+					attr.getResourceId(8, 0));
 			rrIconAccountSearch = Objects.requireNonNull(ContextCompat.getDrawable(
 					activity,
-					attr.getResourceId(8, 0)));
+					attr.getResourceId(9, 0)));
 
 			attr.recycle();
 		}
@@ -356,6 +359,16 @@ public class MainMenuListingManager {
 									R.string.mainmenu_saved,
 									MainMenuFragment.MENU_MENU_ACTION_SAVED,
 									rrIconStarFilled,
+									isFirst.getAndSet(false)));
+				}
+
+				if(mainMenuUserItems.contains(MainMenuFragment.MainMenuUserItems.SAVED_COMMENTS)) {
+					mAdapter.appendToGroup(
+							GROUP_USER_ITEMS,
+							makeItem(
+									R.string.mainmenu_saved_comments,
+									MainMenuFragment.MENU_MENU_ACTION_SAVED_COMMENTS,
+									rrIconComments,
 									isFirst.getAndSet(false)));
 				}
 
